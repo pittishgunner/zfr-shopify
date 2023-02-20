@@ -2167,6 +2167,25 @@ return [
                 'location' => 'json',
             ],
         ],
+        
+        'CreateFulfillmentNew' => [
+            'httpMethod'       => 'POST',
+            'uri'              => 'admin/api/{version}/fulfillments.json',
+            'responseModel'    => 'GenericModel',
+            'summary'          => 'Create a fulfillment for a given order',
+            'data'             => ['root_key' => 'fulfillment'],
+            'parameters'       => [
+                'version' => [
+                    'description' => 'API version',
+                    'location'    => 'uri',
+                    'type'        => 'string',
+                    'required'    => true
+                ],
+            ],
+            'additionalParameters' => [
+                'location' => 'json',
+            ],
+        ],
 
         'UpdateFulfillment' => [
             'httpMethod'       => 'PUT',
