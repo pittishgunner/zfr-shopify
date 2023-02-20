@@ -2395,7 +2395,16 @@ return [
                     'type'        => 'integer',
                     'required'    => true
                 ],
-            ]
+                'new_location_id' => [
+                    'description' => 'new_location_id',
+                    'location'    => 'json',
+                    'type'        => 'integer',
+                    'required'    => true
+                ],
+            ],
+            'additionalParameters' => [
+                'location' => 'query',
+            ],
         ],
 
         'OpenFulfillmentOrder' => [
